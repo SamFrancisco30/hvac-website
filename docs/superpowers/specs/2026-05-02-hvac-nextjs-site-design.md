@@ -25,6 +25,25 @@
 - 首页可以专注获客，不必承担所有 SEO 任务。
 - 后续扩展内容时不容易把首页做得臃肿。
 
+### 1.1 服务范围优先覆盖的业务
+
+首期 `Services` 页面和子页面应明确覆盖以下业务：
+
+- Furnace Installation
+- Air Conditioner
+- Water Heater
+- Tankless Water Heater
+- Heat Pumps
+- Water Purification and Treatment
+
+建议的分组方式：
+
+- `Heating`：Furnace Installation、Water Heater、Tankless Water Heater、Heat Pumps
+- `Cooling`：Air Conditioner
+- `Home Comfort`：Water Purification and Treatment
+
+这样既方便用户理解，也便于后续按搜索意图拆分 SEO 页面。
+
 ### 2. 首页负责转化
 
 首页只做三件事：
@@ -50,13 +69,17 @@
 
 1. `/` 首页
 2. `/services` 服务总览
-3. `/services/heating`
-4. `/services/cooling`
-5. `/services/maintenance`
-6. `/service-areas`
-7. `/about`
-8. `/contact`
-9. `/knowledge-base` 后续添加
+3. `/services/furnace-installation`
+4. `/services/air-conditioner`
+5. `/services/water-heater`
+6. `/services/tankless-water-heater`
+7. `/services/heat-pumps`
+8. `/services/water-purification`
+9. `/services/maintenance`
+10. `/service-areas`
+11. `/about`
+12. `/contact`
+13. `/knowledge-base` 后续添加
 
 可选扩展：
 
@@ -84,10 +107,13 @@
 
 建议包含：
 
-- Heating
-- Cooling
+- Furnace Installation
+- Air Conditioner
+- Water Heater
+- Tankless Water Heater
+- Heat Pumps
+- Water Purification and Treatment
 - Maintenance
-- Installation
 - Emergency repair
 
 ### 单项服务页
@@ -100,6 +126,8 @@
 - 适用场景
 - 常见问题
 - 明确 CTA
+
+优先级上，首期应该先把上面 6 个核心业务页做完整，再考虑扩展其他维修或应急类页面。
 
 ### 服务区域页
 
@@ -296,8 +324,12 @@ app/
   about/page.tsx
   contact/page.tsx
   services/page.tsx
-  services/heating/page.tsx
-  services/cooling/page.tsx
+  services/furnace-installation/page.tsx
+  services/air-conditioner/page.tsx
+  services/water-heater/page.tsx
+  services/tankless-water-heater/page.tsx
+  services/heat-pumps/page.tsx
+  services/water-purification/page.tsx
   services/maintenance/page.tsx
   service-areas/page.tsx
   knowledge-base/page.tsx
@@ -399,4 +431,3 @@ lib/
 - 电话、邮箱、地址是否需要替换成真实业务信息
 - 表单提交要走邮件还是第三方服务
 - 是否需要先做 Toronto/GTA 的区域聚焦，还是直接面向更广区域
-
