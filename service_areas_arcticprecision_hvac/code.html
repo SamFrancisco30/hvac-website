@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Service Areas - ArcticPrecision HVAC</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#43474a",
+                        "on-tertiary-fixed": "#181c1e",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#465f88",
+                        "on-surface": "#1c1b1b",
+                        "outline-variant": "#c4c6cf",
+                        "outline": "#74777f",
+                        "surface": "#fcf9f8",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#44474e",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#eae7e7",
+                        "inverse-surface": "#313030",
+                        "on-secondary-container": "#fffbff",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#002147",
+                        "tertiary": "#070b0d",
+                        "primary": "#000a1e",
+                        "surface-dim": "#dcd9d9",
+                        "secondary-container": "#d83900",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "inverse-primary": "#aec7f6",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdbd1",
+                        "primary-fixed-dim": "#aec7f6",
+                        "surface-container-low": "#f6f3f2",
+                        "on-primary-fixed": "#001b3d",
+                        "background": "#fcf9f8",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "on-primary-container": "#708ab5",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e5e2e1",
+                        "tertiary-container": "#1e2224",
+                        "tertiary-fixed-dim": "#c3c7ca",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary-fixed-variant": "#872000",
+                        "on-background": "#1c1b1b",
+                        "tertiary-fixed": "#e0e3e6",
+                        "surface-container": "#f0eded",
+                        "secondary": "#ad2c00",
+                        "primary-fixed": "#d6e3ff",
+                        "on-tertiary-container": "#85898c",
+                        "on-secondary-fixed": "#3b0900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "section-padding": "80px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Inter"],
+                        "button": ["Inter"],
+                        "h1": ["Inter"],
+                        "h3": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h2": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "button": ["16px", { "lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "h1": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h3": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col pt-20">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-white/95 dark:bg-slate-950/95 backdrop-blur-md fixed top-0 w-full z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-blue-900 dark:text-white tracking-tighter">
+                ArcticPrecision
+            </div>
+<nav class="hidden md:flex items-center gap-6 font-['Inter'] font-semibold uppercase tracking-wider text-sm">
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 transition-colors duration-300 opacity-80 transition-opacity" href="#">Home</a>
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 transition-colors duration-300 opacity-80 transition-opacity" href="#">Services</a>
+<a class="text-orange-600 dark:text-orange-500 border-b-2 border-orange-600 pb-1 opacity-80 transition-opacity" href="#">Service Areas</a>
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 transition-colors duration-300 opacity-80 transition-opacity" href="#">About Us</a>
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 transition-colors duration-300 opacity-80 transition-opacity" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-secondary text-on-secondary px-6 py-4 font-button text-button rounded uppercase tracking-wider hover:bg-secondary-container transition-colors">Emergency Service</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding flex flex-col items-center text-center">
+<h1 class="font-h1 text-h1 text-primary mb-6 max-w-3xl">Serving the Greater Toronto Area with Precision</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">From routine commercial maintenance to emergency residential repairs, ArcticPrecision delivers unfailing warmth across major urban centers.</p>
+</section>
+<!-- Service Areas & Map Container -->
+<section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter pb-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Areas List -->
+<div class="lg:col-span-5 flex flex-col gap-unit">
+<h2 class="font-h2 text-h2 text-primary mb-4">Core Regions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">We maintain dedicated fleets in key hubs to ensure rapid response times, especially during severe weather events.</p>
+<div class="flex flex-col gap-4">
+<!-- City Item -->
+<div class="bg-surface-container-low border border-surface-variant p-6 rounded-lg flex items-center justify-between hover:shadow-[0_12px_24px_rgba(0,33,71,0.08)] hover:border-secondary transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl group-hover:scale-110 transition-transform">location_on</span>
+<span class="font-h3 text-h3 text-primary">Mississauga</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-secondary transition-colors">chevron_right</span>
+</div>
+<!-- City Item -->
+<div class="bg-surface-container-low border border-surface-variant p-6 rounded-lg flex items-center justify-between hover:shadow-[0_12px_24px_rgba(0,33,71,0.08)] hover:border-secondary transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl group-hover:scale-110 transition-transform">location_on</span>
+<span class="font-h3 text-h3 text-primary">Brampton</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-secondary transition-colors">chevron_right</span>
+</div>
+<!-- City Item -->
+<div class="bg-surface-container-low border border-surface-variant p-6 rounded-lg flex items-center justify-between hover:shadow-[0_12px_24px_rgba(0,33,71,0.08)] hover:border-secondary transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl group-hover:scale-110 transition-transform">location_on</span>
+<span class="font-h3 text-h3 text-primary">Milton</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-secondary transition-colors">chevron_right</span>
+</div>
+<!-- City Item -->
+<div class="bg-surface-container-low border border-surface-variant p-6 rounded-lg flex items-center justify-between hover:shadow-[0_12px_24px_rgba(0,33,71,0.08)] hover:border-secondary transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl group-hover:scale-110 transition-transform">location_on</span>
+<span class="font-h3 text-h3 text-primary">Georgetown</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-secondary transition-colors">chevron_right</span>
+</div>
+<!-- City Item -->
+<div class="bg-primary-container p-6 rounded-lg flex items-center justify-between mt-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">corporate_fare</span>
+<div>
+<span class="font-h3 text-h3 text-on-primary block mb-1">Greater Toronto Area</span>
+<span class="font-body-md text-body-md text-on-primary-container block">Comprehensive commercial coverage</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Visual -->
+<div class="lg:col-span-7 bg-surface-container border border-surface-variant rounded-xl overflow-hidden min-h-[500px] relative shadow-sm">
+<img alt="Map of Greater Toronto Area showing service zones" class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A highly detailed, professional stylistic map visualization of the Greater Toronto Area, focusing on regions like Mississauga, Brampton, and Milton. The map uses a sophisticated color palette of deep navy blues (resembling dark commercial tones) and pristine whites, with subtle high-contrast accents of sunset orange highlighting key service zones. The visual style is modern, architectural, and clean, conveying industrial reliability and premium service coverage without looking like a standard consumer map." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3yZ3Kebuj26N8bPj_eutwawzjOpGOGhE6o8IjYEU79hdroQweH-9eNZbD6yGQn9_7L9qA-a_2DW2GioBiD1QBuL6eoXQXXsvSPU3Xvv8hjL67BXl6PWVMQqzhxZMSg2qcxSJyXfpQUs8QhN44OcLX36Wnx5ymiwuyApdx5khbKUEMAYdZUgc8nLau_bxaja0NESFeICjfyt-m3XGOYu8NNpf7WII38Br2uK0vMZbmegrvB3xYd-Pi5vLPUTYvcACRB7QcXzZPKJC6"/>
+<!-- Overlay Elements for Map -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8">
+<div class="bg-white/90 backdrop-blur-sm border border-surface-variant rounded-lg p-6 max-w-sm">
+<h3 class="font-label-bold text-label-bold text-primary uppercase tracking-wider mb-2">Fleet Dispatch Center</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Centralized monitoring ensures technicians are dispatched from the closest optimal node.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Check Coverage Postal Code -->
+<section class="w-full bg-surface-container-low border-y border-surface-variant py-section-padding">
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-gutter text-center">
+<h2 class="font-h2 text-h2 text-primary mb-4">Check Your Coverage</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Enter your postal code to verify if your commercial property or residence falls within our active dispatch zones.</p>
+<form class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">mark_email_read</span>
+<input class="w-full pl-12 pr-4 h-[56px] bg-surface border border-outline-variant rounded focus:border-secondary focus:ring-1 focus:ring-secondary outline-none font-body-md text-body-md text-primary uppercase placeholder:normal-case placeholder:text-outline transition-colors" placeholder="Enter Postal Code (e.g. L5B 1M5)" type="text"/>
+</div>
+<button class="w-full sm:w-auto h-[56px] px-8 bg-secondary text-on-secondary font-button text-button rounded uppercase tracking-wider hover:bg-secondary-container transition-colors whitespace-nowrap" type="button">
+                        Verify Zone
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-blue-950 dark:bg-black w-full py-12 border-t border-blue-900 dark:border-slate-900 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-white mb-4 md:mb-0">
+                ArcticPrecision
+            </div>
+<div class="col-span-1 md:col-span-3 flex flex-col gap-4">
+<nav class="flex flex-wrap gap-6 font-['Inter'] text-slate-300 text-sm">
+<a class="text-slate-400 hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#">Maintenance Plans</a>
+<a class="text-slate-400 hover:text-white transition-colors" href="#">Careers</a>
+</nav>
+<div class="font-['Inter'] text-slate-300 text-sm mt-4">
+                    © 2024 ArcticPrecision HVAC. Expert Precision. Unfailing Warmth.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>
