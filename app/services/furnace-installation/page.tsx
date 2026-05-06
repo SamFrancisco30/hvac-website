@@ -14,7 +14,8 @@ export default function FurnaceInstallationPage() {
       summary="Properly sized, cleanly installed furnaces that keep GTA homes warm through Ontario winters — from load assessment to final safety commissioning."
       intro="A furnace installation done right means years of reliable, efficient heating. We size equipment to your home's specific heat load using a Manual J calculation — not a rough estimate — and handle the full installation from old unit disconnection to final combustion test. Whether you're replacing a failing furnace mid-winter or upgrading ahead of the season, we keep the process clear and the timeline short."
       Icon={Flame}
-      image="/images/services/furnace-installation/hero.jpg"
+      image="/images/services/furnace-installation/hero.png"
+      imagePosition="right center"
       points={[
         "Manual J heat load calculation for proper sizing",
         "High-efficiency models up to 98% AFUE available",

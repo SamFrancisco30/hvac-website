@@ -14,7 +14,8 @@ export default function MaintenancePage() {
       summary="Preventive maintenance that catches problems before they become breakdowns. Annual tune-ups for furnaces, air conditioners, and heat pumps across the GTA."
       intro="Most HVAC failures don't happen without warning — they follow months of reduced efficiency, worn components, and ignored service intervals. A professional annual tune-up catches these issues before they escalate, keeps your system running at rated efficiency, preserves your warranty coverage, and gives you confidence heading into peak heating and cooling seasons. We cover furnaces, air conditioners, and heat pumps in a single comprehensive visit."
       Icon={Wrench}
-      image="/images/services/maintenance/hero.jpg"
+      image="/images/services/maintenance/hero.png"
+      imagePosition="right center"
       points={[
         "Annual furnace and AC tune-up packages",
         "Heat pump heating and cooling mode inspection",

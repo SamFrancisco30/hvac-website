@@ -14,7 +14,8 @@ export default function AirConditionerPage() {
       summary="Cool, comfortable homes through Ontario summers. We handle AC replacements, new installs, and urgent service calls across the GTA — fast scheduling and straightforward pricing."
       intro="Whether your existing unit has failed or you're replacing an aging system before the heat arrives, we keep the process fast and practical. We carry central air conditioners properly sized for Toronto-area homes and handle everything from line set installation to electrical disconnect and full commissioning. No upselling, no unnecessary complexity — just a working system before summer gets uncomfortable."
       Icon={Snowflake}
-      image="/images/services/air-conditioner/hero.jpg"
+      image="/images/services/air-conditioner/hero.png"
+      imagePosition="right center"
       points={[
         "Central AC replacement and new installation",
         "Cooling load calculation for correct unit sizing",

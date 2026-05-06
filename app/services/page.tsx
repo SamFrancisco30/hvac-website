@@ -16,7 +16,7 @@ const services = [
     group: "Heating",
     icon: Flame,
     summary: "Properly sized installs, old unit removal, and full commissioning for GTA homes.",
-    image: "/images/services/furnace-installation/hero.jpg",
+    image: "/images/services/furnace-installation/hero.png",
     points: ["Manual J load sizing", "High-efficiency models available", "Same-day and next-day slots", "10-year parts warranty"],
     large: true,
   },
@@ -26,7 +26,7 @@ const services = [
     group: "Cooling",
     icon: Snowflake,
     summary: "Central AC installation, replacement, and emergency service during cooling season.",
-    image: "/images/services/air-conditioner/hero.jpg",
+    image: "/images/services/air-conditioner/hero.png",
     points: ["Cooling load calculation", "Old unit removal included", "Same-day emergency service", "Flat-rate pricing"],
     large: false,
   },
@@ -36,7 +36,7 @@ const services = [
     group: "Heating & Cooling",
     icon: Gauge,
     summary: "One system for year-round comfort. Cold-climate models work through Ontario winters.",
-    image: "/images/services/heat-pumps/hero.jpg",
+    image: "/images/services/heat-pumps/hero.png",
     points: ["Efficient to −25°C", "Dual-fuel pairing available", "Rebate-eligible models", "Electrical upgrade included"],
     large: false,
   },
@@ -46,7 +46,7 @@ const services = [
     group: "Heating",
     icon: Droplets,
     summary: "Tank water heater repair and replacement. Same-day service for complete failures.",
-    image: "/images/services/water-heater/hero.jpg",
+    image: "/images/services/water-heater/hero.png",
     points: ["Same-day replacement available", "Tank removal and haul-away", "TSSA-certified gas techs", "Upfront written pricing"],
     large: false,
   },
@@ -56,7 +56,7 @@ const services = [
     group: "Heating",
     icon: FlameKindling,
     summary: "Endless hot water on demand with no standby energy loss. Gas line upgrades included.",
-    image: "/images/services/tankless-water-heater/hero.jpg",
+    image: "/images/services/tankless-water-heater/hero.png",
     points: ["On-demand hot water", "Gas line sizing included", "20+ year lifespan", "Wall-mounted, space-saving"],
     large: false,
   },
@@ -66,7 +66,7 @@ const services = [
     group: "Home Comfort",
     icon: Droplets,
     summary: "Whole-home filtration, water softeners, and reverse osmosis for cleaner GTA water.",
-    image: "/images/services/water-purification/hero.jpg",
+    image: "/images/services/water-purification/hero.png",
     points: ["Water quality assessment included", "Softeners reduce scale buildup", "RO drinking water systems", "Annual filter service"],
     large: false,
   },
@@ -76,7 +76,7 @@ const services = [
     group: "All Systems",
     icon: Wrench,
     summary: "Annual tune-ups for furnaces, AC, and heat pumps. Catch problems before they cost you.",
-    image: "/images/services/maintenance/hero.jpg",
+    image: "/images/services/maintenance/hero.png",
     points: ["Filter replacement included", "Written service report", "Combustion & refrigerant testing", "Flexible scheduling"],
     large: true,
   },
@@ -92,7 +92,7 @@ export default function ServicesPage() {
           <img
             alt=""
             aria-hidden="true"
-            src="/images/services/overview/hero.jpg"
+            src="/images/services/overview/hero.png"
             className="h-full w-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--blue)] via-[rgba(0,33,71,0.9)] to-[rgba(0,33,71,0.6)]" />

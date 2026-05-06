@@ -15,6 +15,7 @@ type ServicePageProps = {
   intro: string;
   Icon: LucideIcon;
   image: string;
+  imagePosition?: string;
   points: string[];
   included: IncludedItem[];
   process: ProcessStep[];
@@ -29,6 +30,7 @@ export function ServicePage({
   intro,
   Icon,
   image,
+  imagePosition = "center center",
   points,
   included,
   process,
@@ -42,8 +44,14 @@ export function ServicePage({
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-[var(--blue-2)] px-6 py-[100px] text-white">
         <div className="absolute inset-0">
-          <img alt="" aria-hidden="true" src={image} className="h-full w-full object-cover opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--blue)] via-[rgba(0,33,71,0.9)] to-[rgba(0,33,71,0.5)]" />
+          <img
+            alt=""
+            aria-hidden="true"
+            src={image}
+            className="h-full w-full object-cover opacity-50"
+            style={{ objectPosition: imagePosition }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,33,71,0.95)] via-[rgba(0,33,71,0.75)] to-[rgba(0,33,71,0.2)]" />
         </div>
         <div className="relative z-10 mx-auto max-w-[1280px]">
           <div className="max-w-2xl">

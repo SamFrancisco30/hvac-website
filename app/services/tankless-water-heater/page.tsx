@@ -14,7 +14,8 @@ export default function TanklessWaterHeaterPage() {
       summary="Endless hot water on demand with no standby energy waste. We install and service tankless water heaters across the GTA — gas line upgrades included when needed."
       intro="Tankless water heaters heat water only when you need it, eliminating the standby heat loss of a conventional tank and providing a continuous supply that won't run out mid-shower. They're a strong fit for homes where the existing tank is undersized, space is limited, or energy efficiency is a priority. We handle the full installation — including gas line sizing and upgrade if required — and make the process straightforward from the first call."
       Icon={FlameKindling}
-      image="/images/services/tankless-water-heater/hero.jpg"
+      image="/images/services/tankless-water-heater/hero.png"
+      imagePosition="right center"
       points={[
         "Continuous hot water — never runs out",
         "Significant energy savings versus tank systems",

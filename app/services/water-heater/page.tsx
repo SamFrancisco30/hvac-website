@@ -14,7 +14,8 @@ export default function WaterHeaterPage() {
       summary="Reliable hot water restored fast. We repair and replace standard tank water heaters across the GTA — same-day service available when hot water can't wait."
       intro="A failed water heater is one of the most disruptive breakdowns a home can have. We respond quickly, diagnose the issue honestly, and replace units the same day when the situation calls for it. We work with natural gas tank water heaters in standard residential sizes and handle the full replacement — from draining the old tank to connecting gas and water lines and disposing of the old unit."
       Icon={Droplets}
-      image="/images/services/water-heater/hero.jpg"
+      image="/images/services/water-heater/hero.png"
+      imagePosition="right center"
       points={[
         "Same-day service for complete failures",
         "Gas and water connection included",

@@ -14,7 +14,8 @@ export default function WaterPurificationPage() {
       summary="Cleaner, better-tasting water throughout your home. We install and service whole-home filtration, water softeners, and reverse osmosis systems across the GTA."
       intro="GTA municipal water is safe but not always pleasant — hard water, chlorine taste, and sediment are common complaints in the region. A water treatment system addresses these issues at the source, improving water quality for drinking, cooking, and everyday use while reducing scale buildup in appliances and plumbing. We assess your water first, recommend the right solution, and handle the full installation."
       Icon={Droplets}
-      image="/images/services/water-purification/hero.jpg"
+      image="/images/services/water-purification/hero.png"
+      imagePosition="right center"
       points={[
         "Whole-home water softener installation",
         "Reverse osmosis drinking water systems",

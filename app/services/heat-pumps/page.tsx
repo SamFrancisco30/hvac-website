@@ -14,7 +14,8 @@ export default function HeatPumpsPage() {
       summary="One system for heating and cooling. Modern cold-climate heat pumps work efficiently through Ontario winters and keep homes comfortable year-round."
       intro="Heat pumps have advanced significantly — today's cold-climate models deliver reliable heating down to -25°C, making them a viable primary heat source for GTA homes. A heat pump replaces your central air conditioner and can supplement or replace your furnace, moving heat rather than generating it and delivering more energy output per dollar spent on electricity. We handle equipment selection, load calculations, electrical upgrades, and full installation."
       Icon={Gauge}
-      image="/images/services/heat-pumps/hero.jpg"
+      image="/images/services/heat-pumps/hero.png"
+      imagePosition="right center"
       points={[
         "Year-round heating and cooling from one system",
         "Cold-climate models efficient to -25°C",
