@@ -58,7 +58,7 @@ export default function HomePage() {
             </div>
 
             <div className="mt-6 flex w-full flex-col items-center justify-center gap-8 border-t border-white/15 pt-8 sm:flex-row">
-              <TrustItem title="10-Year" text="Parts Warranty" icon={ShieldCheck} />
+              <TrustItem title="Free" text="Estimates & Quotes" icon={ShieldCheck} />
               <Divider />
               <TrustItem title="Same-Day" text="Service Available" icon={Clock3} />
               <Divider />
@@ -196,9 +196,9 @@ export default function HomePage() {
             <div className="lg:col-span-7">
               <div className="rounded-[14px] border border-[var(--border)] bg-white p-12 shadow-[0_12px_24px_rgba(0,33,71,0.08)]">
                 <div className="mb-8">
-                  <h2 className="mb-2 text-4xl font-bold tracking-tight text-[var(--blue)]">Request deployment</h2>
+                  <h2 className="mb-2 text-4xl font-bold tracking-tight text-[var(--blue)]">Request Service</h2>
                   <p className="text-base leading-7 text-slate-600">
-                    Fill out the details below. Our technical dispatch team will follow up soon.
+                    Fill out the details below. We respond to all requests within a few hours during business hours.
                   </p>
                 </div>
                 <ContactForm />

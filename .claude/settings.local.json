@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:a2zcomfort.ca)",
+      "Bash(Get-ChildItem -Path \"d:\\\\HVAC\\\\hvac-website\\\\app\" -Recurse -Directory)",
+      "Bash(Select-Object FullName)"
+    ]
+  }
+}
