@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ComponentType } from "react";
 import { Check, ChevronRight, Clock3, Droplets, Flame, PhoneCall, ShieldCheck, Snowflake, Wrench, Zap } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
+import { ServiceAreaMap } from "@/components/service-area-map";
 import { coverageCities, site } from "@/lib/site";
 
 const heroImage =
@@ -10,9 +11,6 @@ const heroImage =
 
 const heatingImage = "/images/home/heating-systems.png";
 const coolingImage = "/images/home/precision-cooling.png";
-
-const serviceAreaImage =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuB3yZ3Kebuj26N8bPj_eutwawzjOpGOGhE6o8IjYEU79hdroQweH-9eNZbD6yGQn9_7L9qA-a_2DW2GioBiD1QBuL6eoXQXXsvSPU3Xvv8hjL67BXl6PWVMQqzhxZMSg2qcxSJyXfpQUs8QhN44OcLX36Wnx5ymiwuyApdx5khbKUEMAYdZUgc8nLau_bxaja0NESFeICjfyt-m3XGOYu8NNpf7WII38Br2uK0vMZbmegrvB3xYd-Pi5vLPUTYvcACRB7QcXzZPKJC6";
 
 export default function HomePage() {
   return (
@@ -132,42 +130,42 @@ export default function HomePage() {
         </section>
 
         <section className="bg-[var(--surface-container-low)] py-20">
-          <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-6 lg:grid-cols-12">
-            <div className="lg:col-span-5">
+          <div className="mx-auto max-w-[1280px] px-6">
+            <div className="mb-8 lg:w-5/12">
               <h2 className="mb-4 text-4xl font-bold tracking-tight text-[var(--blue)]">Serving the Greater Toronto Area</h2>
-              <p className="mb-8 text-lg leading-8 text-slate-600">
+              <p className="text-lg leading-8 text-slate-600">
                 Rapid dispatch times across Mississauga, Brampton, Milton, Georgetown, and surrounding communities.
               </p>
-              <div className="space-y-4">
-                {coverageCities.map((city) => (
-                  <div
-                    key={city}
-                    className="flex items-center justify-between rounded-[14px] border border-[var(--border)] bg-white px-6 py-5 shadow-sm transition hover:border-[var(--orange)] hover:shadow-[0_12px_24px_rgba(0,33,71,0.08)]"
-                  >
-                    <div className="flex items-center gap-4">
-                      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[rgba(255,69,0,0.1)] text-[var(--orange)]">
-                        <Check className="h-5 w-5" />
-                      </span>
-                      <span className="text-lg font-semibold text-[var(--blue)]">{city}</span>
-                    </div>
-                    <ChevronRight className="h-5 w-5 text-slate-400" />
-                  </div>
-                ))}
-              </div>
             </div>
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+              <div className="lg:col-span-5">
+                <div className="space-y-4">
+                  {coverageCities.map((city) => (
+                    <div
+                      key={city}
+                      className="flex items-center justify-between rounded-[14px] border border-[var(--border)] bg-white px-6 py-5 shadow-sm transition hover:border-[var(--orange)] hover:shadow-[0_12px_24px_rgba(0,33,71,0.08)]"
+                    >
+                      <div className="flex items-center gap-4">
+                        <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[rgba(255,69,0,0.1)] text-[var(--orange)]">
+                          <Check className="h-5 w-5" />
+                        </span>
+                        <span className="text-lg font-semibold text-[var(--blue)]">{city}</span>
+                      </div>
+                      <ChevronRight className="h-5 w-5 text-slate-400" />
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-            <div className="relative min-h-[500px] overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface-container)] shadow-sm lg:col-span-7">
-              <img
-                alt="Map of Greater Toronto Area showing service zones"
-                src={serviceAreaImage}
-                className="absolute inset-0 h-full w-full object-cover opacity-80 mix-blend-multiply"
-              />
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[rgba(0,33,71,0.8)] to-transparent p-8">
-                <div className="max-w-sm rounded-[16px] border border-[var(--border)] bg-white/90 p-6 backdrop-blur-sm">
-                  <div className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--blue)]">Fleet Dispatch Center</div>
-                  <p className="text-sm leading-7 text-slate-600">
-                    Centralized monitoring ensures technicians are dispatched from the closest optimal node.
-                  </p>
+              <div className="relative isolate overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface-container)] shadow-sm lg:col-span-7">
+                <ServiceAreaMap className="absolute inset-0 h-full w-full" />
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[rgba(0,33,71,0.8)] to-transparent p-8">
+                  <div className="max-w-sm rounded-[16px] border border-[var(--border)] bg-white/90 p-6 backdrop-blur-sm">
+                    <div className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--blue)]">Fleet Dispatch Center</div>
+                    <p className="text-sm leading-7 text-slate-600">
+                      Centralized monitoring ensures technicians are dispatched from the closest optimal node.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

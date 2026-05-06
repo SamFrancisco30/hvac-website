@@ -13,31 +13,33 @@ export function SiteHeader() {
         <nav className="hidden items-center space-x-8 md:flex">
           {navLinks.map((link) =>
             link.label === "Services" ? (
-              <details key={link.href} className="group relative">
-                <summary className="list-none cursor-pointer px-2 text-sm font-semibold uppercase tracking-wider text-[var(--blue)] transition-colors hover:text-[var(--orange)]">
+              <div key={link.href} className="group relative">
+                <span className="cursor-default px-2 text-sm font-semibold uppercase tracking-wider text-[var(--blue)] transition-colors group-hover:text-[var(--orange)]">
                   {link.label}
-                </summary>
-                <div className="absolute left-1/2 top-full z-50 mt-3 w-[600px] -translate-x-1/2 rounded-xl border border-[var(--border)] bg-white p-6 shadow-[0_20px_60px_rgba(0,33,71,0.16)]">
-                  <div className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--orange)]">Services</div>
-                  <div className="grid grid-cols-2 gap-3">
-                    {serviceMenu.map((item) => (
-                      <Link
-                        key={item.slug}
-                        href={`/services/${item.slug}`}
-                        className="rounded-lg border border-[var(--border)] px-4 py-3 text-sm font-medium text-[var(--blue)] transition hover:border-[var(--orange)] hover:bg-[var(--surface-alt)]"
-                      >
-                        <div className="text-xs uppercase tracking-[0.18em] text-[var(--orange)]">{item.group}</div>
-                        <div className="mt-1">{item.title}</div>
+                </span>
+                <div className="invisible absolute left-1/2 top-full z-50 w-[600px] -translate-x-1/2 pt-3 opacity-0 transition-[opacity,visibility] duration-150 group-hover:visible group-hover:opacity-100">
+                  <div className="rounded-xl border border-[var(--border)] bg-white p-6 shadow-[0_20px_60px_rgba(0,33,71,0.16)]">
+                    <div className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--orange)]">Services</div>
+                    <div className="grid grid-cols-2 gap-3">
+                      {serviceMenu.map((item) => (
+                        <Link
+                          key={item.slug}
+                          href={`/services/${item.slug}`}
+                          className="rounded-lg border border-[var(--border)] px-4 py-3 text-sm font-medium text-[var(--blue)] transition hover:border-[var(--orange)] hover:bg-[var(--surface-alt)]"
+                        >
+                          <div className="text-xs uppercase tracking-[0.18em] text-[var(--orange)]">{item.group}</div>
+                          <div className="mt-1">{item.title}</div>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="mt-4 border-t border-[var(--border)] pt-4">
+                      <Link href={link.href} className="text-sm font-semibold text-[var(--blue)] transition hover:text-[var(--orange)]">
+                        View all services
                       </Link>
-                    ))}
-                  </div>
-                  <div className="mt-4 border-t border-[var(--border)] pt-4">
-                    <Link href={link.href} className="text-sm font-semibold text-[var(--blue)] transition hover:text-[var(--orange)]">
-                      View all services
-                    </Link>
+                    </div>
                   </div>
                 </div>
-              </details>
+              </div>
             ) : (
               <Link
                 key={link.href}
