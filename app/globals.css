@@ -5,6 +5,8 @@
   --bg: #fcf9f8;
   --surface: #ffffff;
   --surface-alt: #f6f3f2;
+  --surface-warm: #f1ece9;
+  --surface-ink: #061b35;
   --text: #1c1b1b;
   --muted: #44474e;
   --blue: #002147;
@@ -23,7 +25,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
 }
 
 * {
@@ -37,6 +40,24 @@ a {
 
 img {
   display: block;
+}
+
+button,
+a,
+summary,
+input,
+select,
+textarea {
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(216, 57, 0, 0.45);
 }
 
 .service-area-marker {

@@ -87,18 +87,9 @@ export default function ServicesPage() {
     <div className="pt-20">
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[var(--blue-2)] px-6 py-[100px] text-white">
-        <div className="absolute inset-0">
-          <img
-            alt=""
-            aria-hidden="true"
-            src="/images/services/overview/hero.png"
-            className="h-full w-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--blue)] via-[rgba(0,33,71,0.9)] to-[rgba(0,33,71,0.6)]" />
-        </div>
-        <div className="relative z-10 mx-auto max-w-[1280px]">
-          <div className="max-w-2xl">
+      <section className="overflow-hidden bg-[var(--blue-2)] px-6 py-16 text-white lg:py-20">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-6">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(255,69,0,0.3)] bg-white/10 px-4 py-2 backdrop-blur-sm">
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">ArcticPrecision HVAC</span>
             </div>
@@ -121,6 +112,15 @@ export default function ServicesPage() {
               </Link>
             </div>
           </div>
+          <div className="lg:col-span-6">
+            <div className="overflow-hidden rounded-lg border border-white/10 bg-white/5 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.26)]">
+              <img
+                alt="Installed HVAC equipment for residential service"
+                src="/images/services/overview/hero.png"
+                className="aspect-[16/11] w-full rounded-md object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -133,7 +133,7 @@ export default function ServicesPage() {
               Seven services. One company. We keep the list readable so you can find the right category before you call.
             </p>
           </div>
-          <div className="grid auto-rows-[300px] grid-cols-1 gap-6 md:grid-cols-12">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
             {services.map((service) => (
               <ServiceTile key={service.slug} {...service} />
             ))}
@@ -182,33 +182,30 @@ function ServiceTile({
 }) {
   return (
     <article
-      className={`group relative overflow-hidden rounded-xl border border-[var(--border)] bg-white shadow-[var(--shadow)] transition hover:border-[rgba(216,57,0,0.4)] hover:shadow-xl ${
+      className={`group flex overflow-hidden rounded-lg border border-[var(--border)] bg-white shadow-[var(--shadow)] transition duration-300 hover:-translate-y-1 hover:border-[rgba(216,57,0,0.4)] hover:shadow-xl ${
         large ? "md:col-span-8" : "md:col-span-4"
       }`}
     >
       {/* Image header */}
-      <div className={`relative overflow-hidden bg-[var(--blue-2)] ${large ? "h-48" : "h-40"}`}>
+      <div className={`shrink-0 overflow-hidden bg-[var(--surface-warm)] ${large ? "hidden w-[42%] md:block" : "hidden"}`}>
         <img
           src={image}
           alt={title}
-          className="h-full w-full object-cover opacity-40 transition-transform duration-700 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,33,71,0.95)] via-[rgba(0,33,71,0.5)] to-transparent" />
-        <div className="absolute inset-0 flex flex-col justify-end p-6">
-          <div className="mb-3 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(255,69,0,0.2)] backdrop-blur-sm">
-              <Icon className="h-5 w-5 text-[var(--orange)]" />
-            </div>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--orange)]">{group}</span>
-          </div>
-          <h2 className="text-2xl font-bold text-white">{title}</h2>
-          <p className="mt-1 text-xs leading-5 text-slate-300">{summary}</p>
-        </div>
       </div>
 
       {/* Points + CTA */}
-      <div className="p-6">
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+      <div className="flex min-h-[300px] flex-1 flex-col p-6">
+        <div className="mb-5 flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[rgba(216,57,0,0.1)]">
+            <Icon className="h-5 w-5 text-[var(--orange)]" />
+          </div>
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--orange)]">{group}</span>
+        </div>
+        <h2 className="text-2xl font-bold text-[var(--blue)]">{title}</h2>
+        <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{summary}</p>
+        <div className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
           {points.map((point) => (
             <div key={point} className="flex items-start gap-2">
               <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[var(--orange)]" />
@@ -218,7 +215,7 @@ function ServiceTile({
         </div>
         <Link
           href={`/services/${slug}`}
-          className="mt-5 inline-flex items-center gap-2 rounded-lg bg-[var(--orange)] px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] text-white transition hover:bg-[var(--orange-deep)]"
+          className="mt-auto inline-flex w-fit items-center gap-2 rounded-lg bg-[var(--orange)] px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] text-white transition hover:bg-[var(--orange-deep)]"
         >
           View service <ArrowRight className="h-3.5 w-3.5" />
         </Link>
