@@ -42,19 +42,9 @@ export function ServicePage({
     <div className="pt-20">
 
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-[var(--blue-2)] px-6 py-[100px] text-white">
-        <div className="absolute inset-0">
-          <img
-            alt=""
-            aria-hidden="true"
-            src={image}
-            className="h-full w-full object-cover opacity-50"
-            style={{ objectPosition: imagePosition }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(0,33,71,0.95)] via-[rgba(0,33,71,0.75)] to-[rgba(0,33,71,0.2)]" />
-        </div>
-        <div className="relative z-10 mx-auto max-w-[1280px]">
-          <div className="max-w-2xl">
+      <section className="overflow-hidden bg-[var(--blue-2)] px-6 py-16 text-white lg:py-20">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-6">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(255,69,0,0.3)] bg-white/10 px-4 py-2 backdrop-blur-sm">
               <Icon className="h-4 w-4 text-[var(--orange)]" />
               <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">GTA Residential HVAC</span>
@@ -76,6 +66,16 @@ export function ServicePage({
                 <Phone className="h-4 w-4" />
                 {site.phone}
               </Link>
+            </div>
+          </div>
+          <div className="lg:col-span-6">
+            <div className="overflow-hidden rounded-lg border border-white/10 bg-white/5 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.26)]">
+              <img
+                alt={`${title} service equipment`}
+                src={image}
+                className="aspect-[16/11] w-full rounded-md object-cover"
+                style={{ objectPosition: imagePosition }}
+              />
             </div>
           </div>
         </div>
