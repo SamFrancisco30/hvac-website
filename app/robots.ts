@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://warmwise.ca/sitemap.xml",
+    sitemap: "https://airwego.ca/sitemap.xml",
   };
 }
