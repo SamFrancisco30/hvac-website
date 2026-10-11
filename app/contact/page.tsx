@@ -4,8 +4,8 @@ import { ContactForm } from "@/components/contact-form";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact | ArcticPrecision HVAC",
-  description: "Call or submit a service request to reach ArcticPrecision HVAC. Residential HVAC service across the GTA — same-day dispatch available.",
+  title: "Contact | WARMWISE",
+  description: "Call or submit a service request to reach WARMWISE. Residential HVAC service across the GTA — same-day dispatch available.",
 };
 
 export default function ContactPage() {

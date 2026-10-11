@@ -10,7 +10,9 @@ export function SiteFooter() {
 
           {/* Brand */}
           <div className="lg:col-span-3">
-            <div className="mb-2 text-xl font-bold text-white">{site.shortName}</div>
+            <div className="mb-2 text-xl font-extrabold tracking-tight text-white" aria-label="WARMWISE">
+              <span>WARM</span><span className="text-[var(--orange)]">WISE</span>
+            </div>
             <p className="mb-6 text-sm leading-7 text-slate-400">{site.slogan}</p>
             <div className="space-y-2 text-sm text-slate-400">
               <a href={site.phoneHref} className="flex items-center gap-2 transition hover:text-white">

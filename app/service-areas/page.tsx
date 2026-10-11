@@ -5,8 +5,8 @@ import { ServiceAreaMap } from "@/components/service-area-map";
 import { cityData } from "@/lib/city-data";
 
 export const metadata: Metadata = {
-  title: "Service Areas | ArcticPrecision HVAC",
-  description: "ArcticPrecision HVAC serves Toronto, Mississauga, Brampton, Milton, Georgetown, Oakville, Burlington, and Etobicoke. Fast residential HVAC dispatch across the GTA.",
+  title: "Service Areas | WARMWISE",
+  description: "WARMWISE serves Toronto, Mississauga, Brampton, Milton, Georgetown, Oakville, Burlington, and Etobicoke. Fast residential HVAC dispatch across the GTA.",
 };
 
 export default function ServiceAreasPage() {

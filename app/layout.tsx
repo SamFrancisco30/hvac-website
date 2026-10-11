@@ -13,21 +13,21 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://arcticprecision.ca"),
+  metadataBase: new URL("https://warmwise.ca"),
   title: {
     default: site.name,
     template: `%s | ${site.shortName}`,
   },
-  description: "Residential HVAC services for GTA homes, with fast phone contact, clear quotes, and easy online form requests.",
+  description: "WARMWISE is a GTA HVAC contractor. Cold-climate heat pumps, furnaces and AC — we check every rebate you qualify for, including Ontario's Home Renovation Savings up to $7,500.",
   openGraph: {
     title: site.name,
-    description: "Residential HVAC services for GTA homes, with fast phone contact, clear quotes, and easy online form requests.",
+    description: "WARMWISE is a GTA HVAC contractor. Cold-climate heat pumps, furnaces and AC — we check every rebate you qualify for, including Ontario's Home Renovation Savings up to $7,500.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: site.name,
-    description: "Residential HVAC services for GTA homes, with fast phone contact, clear quotes, and easy online form requests.",
+    description: "WARMWISE is a GTA HVAC contractor. Cold-climate heat pumps, furnaces and AC — we check every rebate you qualify for, including Ontario's Home Renovation Savings up to $7,500.",
   },
 };
 
@@ -49,7 +49,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "HVACBusiness",
               name: site.name,
-              url: "https://arcticprecision.ca",
+              url: "https://warmwise.ca",
               telephone: site.phone,
               email: site.email,
               areaServed: site.serviceArea,

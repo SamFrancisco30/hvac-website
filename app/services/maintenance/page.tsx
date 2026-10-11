@@ -3,7 +3,7 @@ import { Wrench, ClipboardList, Filter, Gauge, ClipboardCheck, Flame, Snowflake,
 import { ServicePage } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "HVAC Maintenance | ArcticPrecision HVAC",
+  title: "HVAC Maintenance | WARMWISE",
   description: "Annual HVAC maintenance for GTA homes. Furnace, AC, and heat pump tune-ups that prevent breakdowns and keep systems running at peak efficiency.",
 };
 

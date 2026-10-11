@@ -3,7 +3,7 @@ import { Flame, Ruler, Truck, Wrench, ClipboardCheck, Snowflake, ShieldCheck, Ga
 import { ServicePage } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "Furnace Installation | ArcticPrecision HVAC",
+  title: "Furnace Installation | WARMWISE",
   description: "Professional furnace installation for GTA homeowners. Proper load sizing, clean install, old unit removal, and commissioning included.",
 };
 

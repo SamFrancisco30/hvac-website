@@ -1,17 +1,18 @@
 export const site = {
-  name: "ArcticPrecision HVAC",
-  shortName: "ArcticPrecision",
-  slogan: "Expert precision. Unfailing warmth.",
+  name: "WARMWISE",
+  shortName: "WARMWISE",
+  slogan: "Heating & cooling, done wisely.",
   phone: "+1 (647) 960-4029",
   phoneHref: "tel:+16479604029",
-  email: "service@arcticprecision.ca",
-  emailHref: "mailto:service@arcticprecision.ca",
+  email: "hello@warmwise.ca",
+  emailHref: "mailto:hello@warmwise.ca",
   serviceArea: "Greater Toronto Area, including Toronto, Mississauga, Brampton, Milton, and nearby communities.",
   address: "Toronto, Ontario",
 };
 
 export const navLinks = [
   { label: "Home", href: "/" },
+  { label: "Rebates", href: "/rebate-check" },
   { label: "Services", href: "/services" },
   { label: "Service Areas", href: "/service-areas" },
   { label: "About", href: "/about" },

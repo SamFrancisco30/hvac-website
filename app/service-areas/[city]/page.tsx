@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(slug);
   if (!city) return {};
   return {
-    title: `HVAC Service in ${city.name} | ArcticPrecision`,
+    title: `HVAC Service in ${city.name} | WARMWISE`,
     description: `Residential HVAC installation and repair in ${city.name}, ${city.region}. Furnace installation, air conditioning, heat pumps, and water heaters — fast dispatch, transparent pricing.`,
   };
 }
@@ -173,7 +173,7 @@ export default async function CityPage({ params }: Props) {
               {/* Other areas */}
               <div className="rounded-xl border border-[var(--border)] bg-white p-8 shadow-[var(--shadow)]">
                 <h2 className="mb-2 text-xl font-bold text-[var(--blue)]">Other Areas We Serve</h2>
-                <p className="mb-5 text-sm text-[var(--muted)]">ArcticPrecision covers the full Greater Toronto Area.</p>
+                <p className="mb-5 text-sm text-[var(--muted)]">WARMWISE covers the full Greater Toronto Area.</p>
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
                   {otherCities.map((c) => (
                     <Link
