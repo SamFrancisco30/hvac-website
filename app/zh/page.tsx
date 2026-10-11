@@ -4,7 +4,7 @@ import { BadgeCheck, BellRing, CalendarCheck, ChevronRight, Flame, PhoneCall, Sh
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "安省热泵补贴查询 | WARMWISE",
+  title: "安省热泵补贴查询 | Air We Go",
   description:
     "GTA 华人暖通公司：安省换热泵最高拿 $7,500 补贴，联邦 2027 年再加最高 $10,000。持牌师傅安装，中文沟通，60 秒查你家能拿多少。",
 };
@@ -61,7 +61,7 @@ export default function ZhLandingPage() {
               <span className="mt-3 block text-2xl font-semibold text-slate-200 sm:text-3xl">我们帮你全程申请，一分钱不用多操心</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
-              WARMWISE 是 GTA 本地暖通公司。联邦补贴 2027 年 1 月开放，低收入家庭最高再加 $10,000——现在进早鸟名单，开放第一周就帮你申请。
+              Air We Go 是 GTA 本地暖通公司。联邦补贴 2027 年 1 月开放，低收入家庭最高再加 $10,000——现在进早鸟名单，开放第一周就帮你申请。
             </p>
             <div className="flex flex-col gap-4 pt-6 sm:flex-row">
               <Link

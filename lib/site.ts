@@ -1,11 +1,11 @@
 export const site = {
-  name: "WARMWISE",
-  shortName: "WARMWISE",
-  slogan: "Heating & cooling, done wisely.",
+  name: "Air We Go",
+  shortName: "Air We Go",
+  slogan: "Comfort, on its way.",
   phone: "+1 (647) 960-4029",
   phoneHref: "tel:+16479604029",
-  email: "hello@warmwise.ca",
-  emailHref: "mailto:hello@warmwise.ca",
+  email: "hello@airwego.ca",
+  emailHref: "mailto:hello@airwego.ca",
   serviceArea: "Greater Toronto Area, including Toronto, Mississauga, Brampton, Milton, and nearby communities.",
   address: "Toronto, Ontario",
 };

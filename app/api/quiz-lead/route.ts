@@ -12,8 +12,8 @@ type QuizLead = {
   source?: string;
 };
 
-// Google Form "Warmwise Quiz Leads" (personal Gmail account) — anonymous
-// formResponse submissions feed the "Warmwise Leads" spreadsheet.
+// Google Form "Air We Go Quiz Leads" (personal Gmail account) — anonymous
+// formResponse submissions feed the "Air We Go Leads" spreadsheet.
 // Entry IDs were extracted from the live viewform HTML; if the form is ever
 // rebuilt, re-extract them (never guess).
 const FORM_RESPONSE_URL =
@@ -67,6 +67,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Lead capture failed, please try again." }, { status: 502 });
   }
 
-  console.log("WARMWISE quiz lead captured:", body.name.trim(), body.phone.trim());
+  console.log("Air We Go quiz lead captured:", body.name.trim(), body.phone.trim());
   return NextResponse.json({ ok: true });
 }
