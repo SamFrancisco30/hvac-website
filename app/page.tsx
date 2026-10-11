@@ -68,6 +68,26 @@ export default function HomePage() {
           </div>
         </header>
 
+        <section className="border-b border-[var(--border)] bg-[var(--blue)] py-10">
+          <div className="mx-auto flex max-w-[1280px] flex-col items-center justify-between gap-6 px-6 lg:flex-row">
+            <div className="text-center lg:text-left">
+              <div className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                Ontario pays <span className="text-[var(--orange)]">up to $7,500</span> toward your heat pump
+              </div>
+              <p className="mt-2 text-slate-300">
+                Plus up to $10,000 more from the federal rebate opening January 2027. See what you qualify for in 60 seconds.
+              </p>
+            </div>
+            <Link
+              href="/rebate-check"
+              className="inline-flex shrink-0 items-center justify-center gap-3 rounded-lg bg-[var(--orange)] px-8 py-4 text-lg font-semibold text-white shadow-[0_18px_40px_rgba(216,57,0,0.32)] transition hover:bg-[var(--orange-deep)]"
+            >
+              Check My Rebate Eligibility
+              <ChevronRight className="h-5 w-5" />
+            </Link>
+          </div>
+        </section>
+
         <section className="border-b border-[var(--border)] bg-[var(--surface-alt)] py-12">
           <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-8 px-6 md:grid-cols-2 lg:grid-cols-4">
             <FeatureItem

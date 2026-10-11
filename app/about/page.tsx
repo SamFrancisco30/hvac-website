@@ -4,8 +4,8 @@ import { ShieldCheck, Clock, FileText, Wrench, ArrowRight, Phone, CheckCircle2 }
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About ArcticPrecision HVAC | GTA Residential Specialists",
-  description: "ArcticPrecision HVAC is a residential-first HVAC company serving the Greater Toronto Area. TSSA registered, licensed technicians, transparent pricing.",
+  title: "About WARMWISE | GTA Residential Specialists",
+  description: "WARMWISE is a residential-first HVAC company serving the Greater Toronto Area. TSSA registered, licensed technicians, transparent pricing.",
 };
 
 export default function AboutPage() {
