@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://arcticprecision.ca/sitemap.xml",
+    sitemap: "https://warmwise.ca/sitemap.xml",
   };
 }
