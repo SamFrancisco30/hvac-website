@@ -202,7 +202,7 @@ export function ServicePage({
 
               {/* Trust signals */}
               <div className="rounded-xl border border-[var(--border)] bg-white p-6 shadow-[var(--shadow)]">
-                <div className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--orange)]">Why ArcticPrecision</div>
+                <div className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--orange)]">Why WARMWISE</div>
                 <div className="space-y-4">
                   {[
                     { I: Shield, label: "TSSA Registered & Insured", sub: "Licensed for residential work in Ontario." },

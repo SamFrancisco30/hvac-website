@@ -6,8 +6,8 @@ export function SiteHeader() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-[var(--border)] bg-white/95 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
-        <Link href="/" className="text-xl font-bold tracking-tight text-[var(--blue)] sm:text-2xl">
-          {site.shortName}
+        <Link href="/" className="text-xl font-extrabold tracking-tight sm:text-2xl" aria-label="WARMWISE home">
+          <span className="text-[var(--blue)]">WARM</span><span className="text-[var(--orange)]">WISE</span>
         </Link>
 
         <nav className="hidden items-center space-x-8 md:flex">
