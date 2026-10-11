@@ -3,7 +3,7 @@ import { Wrench, ClipboardList, Filter, Gauge, ClipboardCheck, Flame, Snowflake,
 import { ServicePage } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "HVAC Maintenance | WARMWISE",
+  title: "HVAC Maintenance | Air We Go",
   description: "Annual HVAC maintenance for GTA homes. Furnace, AC, and heat pump tune-ups that prevent breakdowns and keep systems running at peak efficiency.",
 };
 

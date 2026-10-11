@@ -3,7 +3,7 @@ import { Droplets, ClipboardList, Truck, Wrench, ClipboardCheck, FlameKindling, 
 import { ServicePage } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "Water Heater Repair & Replacement | WARMWISE",
+  title: "Water Heater Repair & Replacement | Air We Go",
   description: "Hot water tank repair and replacement for GTA homes. Fast response, same-day service available, full installation with haul-away.",
 };
 
