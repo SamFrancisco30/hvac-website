@@ -5,7 +5,7 @@ import type { ComponentType } from "react";
 import { ArrowRight, CheckCircle2, Flame, Snowflake, Droplets, FlameKindling, Gauge, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Services | ArcticPrecision HVAC",
+  title: "Services | WARMWISE",
   description: "Residential HVAC services for the Greater Toronto Area — furnace installation, air conditioning, heat pumps, water heaters, and water treatment.",
 };
 
@@ -91,7 +91,7 @@ export default function ServicesPage() {
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-12 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[rgba(255,69,0,0.3)] bg-white/10 px-4 py-2 backdrop-blur-sm">
-              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">ArcticPrecision HVAC</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/90">WARMWISE</span>
             </div>
             <h1 className="mb-5 text-5xl font-bold leading-tight tracking-tight lg:text-[56px]">Expert Precision.<br />Unfailing Warmth.</h1>
             <p className="mb-8 text-lg leading-8 text-slate-300">
