@@ -3,7 +3,7 @@ import { Droplets, FlaskConical, Wrench, ClipboardCheck, Filter, FlameKindling, 
 import { ServicePage } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "Water Purification & Treatment | ArcticPrecision HVAC",
+  title: "Water Purification & Treatment | WARMWISE",
   description: "Whole-home water purification and treatment for GTA households. Filtration, softening, and reverse osmosis systems installed and serviced.",
 };
 

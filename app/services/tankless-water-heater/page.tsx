@@ -3,7 +3,7 @@ import { FlameKindling, Ruler, Zap, Wrench, ClipboardCheck, Droplets, ShieldChec
 import { ServicePage } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "Tankless Water Heater Installation | ArcticPrecision HVAC",
+  title: "Tankless Water Heater Installation | WARMWISE",
   description: "Tankless water heater installation and service for GTA homes. On-demand hot water, energy savings, and professional gas line work.",
 };
 

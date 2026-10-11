@@ -14,11 +14,13 @@ const routes = [
   "/services/maintenance",
   "/service-areas",
   "/knowledge-base",
+  "/rebate-check",
+  "/zh",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
-    url: `https://arcticprecision.ca${route}`,
+    url: `https://warmwise.ca${route}`,
     lastModified: new Date(),
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1 : 0.7,
