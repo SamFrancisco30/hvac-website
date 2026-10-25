@@ -4,14 +4,14 @@ import { BellRing, ChevronRight, Gauge, Ruler, Zap, Wrench, ClipboardCheck, Flam
 import { ServicePage } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "Heat Pump Installation | Air We Go",
+  title: "Heat Pump Installation",
   description:
     "Heat pump installation in the GTA with rebate help: Ontario pays up to $7,500 now, and the federal rebate (up to $10,000) opens January 2027. Cold-climate models that heat at -25°C.",
 };
 
 export default function HeatPumpsPage() {
   return (
-    <main>
+    <div>
       {/* Rebate dual-track banner */}
       <section className="bg-[var(--blue)] px-6 pb-12 pt-28 text-white">
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-6 md:grid-cols-2">
@@ -145,6 +145,6 @@ export default function HeatPumpsPage() {
           { title: "Maintenance", slug: "maintenance", Icon: ShieldCheck },
         ]}
       />
-    </main>
+    </div>
   );
 }

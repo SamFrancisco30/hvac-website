@@ -4,7 +4,7 @@ import { BadgeCheck, BellRing, CalendarCheck, ChevronRight, Flame, PhoneCall, Sh
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "安省热泵补贴查询 | Air We Go",
+  title: "安省热泵补贴查询",
   description:
     "GTA 华人暖通公司：安省换热泵最高拿 $7,500 补贴，联邦 2027 年再加最高 $10,000。持牌师傅安装，中文沟通，60 秒查你家能拿多少。",
 };
@@ -47,7 +47,7 @@ const faqs = [
 
 export default function ZhLandingPage() {
   return (
-    <main lang="zh-CN" className="pt-20">
+    <div lang="zh-CN" className="pt-20">
       {/* Hero */}
       <header className="overflow-hidden bg-[var(--blue)] px-6 py-16 text-white lg:py-20">
         <div className="mx-auto w-full max-w-[1280px]">
@@ -170,6 +170,6 @@ export default function ZhLandingPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

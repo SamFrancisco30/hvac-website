@@ -3,7 +3,7 @@ import { FlameKindling, Ruler, Zap, Wrench, ClipboardCheck, Droplets, ShieldChec
 import { ServicePage } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "Tankless Water Heater Installation | Air We Go",
+  title: "Tankless Water Heater Installation",
   description: "Tankless water heater installation and service for GTA homes. On-demand hot water, energy savings, and professional gas line work.",
 };
 

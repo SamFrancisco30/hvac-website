@@ -4,7 +4,7 @@ import { ShieldCheck, Clock, FileText, Wrench, ArrowRight, Phone, CheckCircle2 }
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About Air We Go | GTA Residential Specialists",
+  title: "About Us | GTA Residential Specialists",
   description: "Air We Go is a residential-first HVAC company serving the Greater Toronto Area. TSSA registered, licensed technicians, transparent pricing.",
 };
 

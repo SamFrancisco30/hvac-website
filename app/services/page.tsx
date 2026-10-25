@@ -5,7 +5,7 @@ import type { ComponentType } from "react";
 import { ArrowRight, CheckCircle2, Flame, Snowflake, Droplets, FlameKindling, Gauge, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Services | Air We Go",
+  title: "Services",
   description: "Residential HVAC services for the Greater Toronto Area — furnace installation, air conditioning, heat pumps, water heaters, and water treatment.",
 };
 
@@ -125,7 +125,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services grid */}
-      <main className="bg-[var(--surface-alt)] py-20">
+      <section className="bg-[var(--surface-alt)] py-20">
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="mb-12">
             <h2 className="mb-3 text-3xl font-bold text-[var(--blue)]">All Services</h2>
@@ -139,7 +139,7 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </main>
+      </section>
 
       {/* Trust strip */}
       <section className="border-y border-[var(--border)] bg-white py-14">

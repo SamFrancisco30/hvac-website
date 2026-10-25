@@ -5,7 +5,7 @@ import { ServiceAreaMap } from "@/components/service-area-map";
 import { cityData } from "@/lib/city-data";
 
 export const metadata: Metadata = {
-  title: "Service Areas | Air We Go",
+  title: "Service Areas",
   description: "Air We Go serves Toronto, Mississauga, Brampton, Milton, Georgetown, Oakville, Burlington, and Etobicoke. Fast residential HVAC dispatch across the GTA.",
 };
 
@@ -73,15 +73,13 @@ export default function ServiceAreasPage() {
             </div>
 
             {/* Map */}
-            <div className="relative isolate overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface-container)] shadow-sm lg:col-span-7">
+            <div className="relative isolate min-h-[380px] overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface-container)] shadow-sm lg:col-span-7 lg:min-h-0">
               <ServiceAreaMap className="absolute inset-0 h-full w-full" />
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[rgba(0,33,71,0.75)] to-transparent p-8">
-                <div className="max-w-sm rounded-[16px] border border-[var(--border)] bg-white/90 p-5 backdrop-blur-sm">
-                  <div className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--blue)]">Coverage Area</div>
-                  <p className="text-sm leading-6 text-slate-600">
-                    8 communities across Toronto, Peel, and Halton regions. Technicians dispatched from the nearest available node.
-                  </p>
-                </div>
+              <div className="pointer-events-none absolute left-4 top-4 z-10 max-w-[18rem] rounded-xl border border-[var(--border)] bg-white/95 px-4 py-3 shadow-[0_12px_24px_rgba(0,33,71,0.1)] backdrop-blur-sm sm:left-6 sm:top-6">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--orange)]">Coverage Area</div>
+                <p className="mt-1 text-sm leading-6 text-slate-600">
+                  {cityData.length} communities across Toronto, Peel, and Halton. Technicians dispatched from the nearest crew.
+                </p>
               </div>
             </div>
           </div>

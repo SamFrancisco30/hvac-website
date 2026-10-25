@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCityBySlug(slug);
   if (!city) return {};
   return {
-    title: `HVAC Service in ${city.name} | Air We Go`,
+    title: `HVAC Service in ${city.name}`,
     description: `Residential HVAC installation and repair in ${city.name}, ${city.region}. Furnace installation, air conditioning, heat pumps, and water heaters — fast dispatch, transparent pricing.`,
   };
 }

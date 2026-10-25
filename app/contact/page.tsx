@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/contact-form";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact | Air We Go",
+  title: "Contact",
   description: "Call or submit a service request to reach Air We Go. Residential HVAC service across the GTA — same-day dispatch available.",
 };
 

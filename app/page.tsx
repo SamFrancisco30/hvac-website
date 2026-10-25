@@ -4,7 +4,8 @@ import type { ComponentType } from "react";
 import { Check, ChevronRight, Clock3, Droplets, Flame, Gauge, PhoneCall, ShieldCheck, Snowflake, Wrench, Zap } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { ServiceAreaMap } from "@/components/service-area-map";
-import { coverageCities, site } from "@/lib/site";
+import { cityData } from "@/lib/city-data";
+import { site } from "@/lib/site";
 
 const heatingImage = "/images/home/heating-systems.png";
 const coolingImage = "/images/home/precision-cooling.png";
@@ -12,13 +13,13 @@ const heatPumpImage = "/images/services/heat-pumps/hero.png";
 
 export default function HomePage() {
   return (
-    <main className="pt-20">
+    <div className="pt-20">
         <header className="overflow-hidden bg-[var(--blue)] px-6 py-16 text-white lg:py-20">
           <div className="mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-12 lg:grid-cols-12">
             <div className="lg:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(255,69,0,0.35)] bg-white/10 px-5 py-2.5 backdrop-blur-md">
               <ShieldCheck className="h-4 w-4 text-[var(--orange)]" />
-              <span className="text-sm font-semibold uppercase tracking-[0.3em] text-white">TSSA Registered &amp; Insured</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white sm:text-sm sm:tracking-[0.3em]">TSSA Registered &amp; Insured</span>
             </div>
 
             <h1 className="mt-8 max-w-3xl text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-[60px] xl:text-[64px]">
@@ -33,7 +34,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--orange)] px-8 py-4 text-lg font-semibold text-white shadow-[0_18px_40px_rgba(216,57,0,0.32)] transition hover:bg-[var(--orange-deep)]"
+                className="group inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--orange)] px-8 py-4 text-lg font-semibold text-white shadow-[0_18px_40px_rgba(216,57,0,0.32)] transition hover:bg-[var(--orange-deep)]"
               >
                 Get an Instant Quote
                 <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -162,32 +163,38 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
               <div className="lg:col-span-5">
-                <div className="space-y-4">
-                  {coverageCities.map((city) => (
-                    <div
-                      key={city}
-                      className="flex items-center justify-between rounded-[14px] border border-[var(--border)] bg-white px-6 py-5 shadow-sm transition hover:border-[var(--orange)] hover:shadow-[0_12px_24px_rgba(0,33,71,0.08)]"
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                  {cityData.map((city) => (
+                    <Link
+                      key={city.slug}
+                      href={`/service-areas/${city.slug}`}
+                      className="group flex items-center justify-between rounded-[14px] border border-[var(--border)] bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--orange)] hover:shadow-[0_12px_24px_rgba(0,33,71,0.08)]"
                     >
                       <div className="flex items-center gap-4">
-                        <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[rgba(255,69,0,0.1)] text-[var(--orange)]">
+                        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(216,57,0,0.1)] text-[var(--orange)]">
                           <Check className="h-5 w-5" />
                         </span>
-                        <span className="text-lg font-semibold text-[var(--blue)]">{city}</span>
+                        <span>
+                          <span className="block text-lg font-semibold leading-tight text-[var(--blue)]">{city.name}</span>
+                          <span className="block text-xs text-slate-500">{city.region}</span>
+                        </span>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-slate-400" />
-                    </div>
+                      <ChevronRight className="h-5 w-5 text-slate-400 transition group-hover:translate-x-1 group-hover:text-[var(--orange)]" />
+                    </Link>
                   ))}
                 </div>
               </div>
 
-              <div className="relative isolate overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface-container)] shadow-sm lg:col-span-7">
+              <div className="relative isolate min-h-[380px] overflow-hidden rounded-[20px] border border-[var(--border)] bg-[var(--surface-container)] shadow-sm lg:col-span-7 lg:min-h-0">
                 <ServiceAreaMap className="absolute inset-0 h-full w-full" />
-                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[rgba(0,33,71,0.8)] to-transparent p-8">
-                  <div className="max-w-sm rounded-[16px] border border-[var(--border)] bg-white/90 p-6 backdrop-blur-sm">
-                    <div className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--blue)]">Fleet Dispatch Center</div>
-                    <p className="text-sm leading-7 text-slate-600">
-                      Centralized monitoring ensures technicians are dispatched from the closest optimal node.
-                    </p>
+                <div className="pointer-events-none absolute left-4 top-4 z-10 flex items-center gap-3 rounded-xl border border-[var(--border)] bg-white/95 px-4 py-3 shadow-[0_12px_24px_rgba(0,33,71,0.1)] backdrop-blur-sm sm:left-6 sm:top-6">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--orange)] opacity-60 motion-reduce:animate-none" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[var(--orange)]" />
+                  </span>
+                  <div>
+                    <div className="text-sm font-semibold text-[var(--blue)]">Same-day dispatch</div>
+                    <div className="text-xs text-slate-500">{cityData.length} communities across the GTA</div>
                   </div>
                 </div>
               </div>
@@ -203,21 +210,13 @@ export default function HomePage() {
               </div>
               <h2 className="text-4xl font-bold tracking-tight text-[var(--blue)]">Get in touch</h2>
               <div className="mt-8 space-y-6">
-                <ContactLine label="Call us" value={site.phone} />
-                <ContactLine label="Email us" value={site.email} />
+                <ContactLine label="Call us" value={site.phone} href={site.phoneHref} />
+                <ContactLine label="Email us" value={site.email} href={site.emailHref} />
                 <ContactLine label="Find us" value={site.address} />
-              </div>
-              <div className="mt-10">
-                <div className="mb-4 text-2xl font-bold text-[var(--orange)]">Follow us</div>
-                <div className="flex gap-3">
-                  <SocialDot label="Facebook" />
-                  <SocialDot label="X" />
-                  <SocialDot label="Instagram" />
-                </div>
               </div>
             </div>
             <div className="lg:col-span-7">
-              <div className="rounded-[14px] border border-[var(--border)] bg-white p-12 shadow-[0_12px_24px_rgba(0,33,71,0.08)]">
+              <div className="rounded-[14px] border border-[var(--border)] bg-white p-6 shadow-[0_12px_24px_rgba(0,33,71,0.08)] sm:p-10 lg:p-12">
                 <div className="mb-8">
                   <h2 className="mb-2 text-4xl font-bold tracking-tight text-[var(--blue)]">Request Service</h2>
                   <p className="text-base leading-7 text-slate-600">
@@ -229,7 +228,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-    </main>
+    </div>
   );
 }
 
@@ -300,22 +299,17 @@ function ServicePanel({
   );
 }
 
-function ContactLine({ label, value }: { label: string; value: string }) {
+function ContactLine({ label, value, href }: { label: string; value: string; href?: string }) {
   return (
     <div>
       <div className="mb-2 text-[14px] font-semibold uppercase tracking-[0.2em] text-[var(--orange)]">{label}</div>
-      <div className="text-base font-semibold text-[var(--blue)]">{value}</div>
-    </div>
-  );
-}
-
-function SocialDot({ label }: { label: string }) {
-  return (
-    <div
-      aria-label={label}
-      className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--blue)] text-sm font-semibold text-white shadow-sm"
-    >
-      {label.slice(0, 1)}
+      {href ? (
+        <a href={href} className="text-base font-semibold text-[var(--blue)] underline-offset-4 transition hover:text-[var(--orange)] hover:underline">
+          {value}
+        </a>
+      ) : (
+        <div className="text-base font-semibold text-[var(--blue)]">{value}</div>
+      )}
     </div>
   );
 }

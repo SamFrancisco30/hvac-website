@@ -57,6 +57,13 @@ export const serviceMenu = serviceGroups.flatMap((group) =>
   })),
 );
 
+export const urgencyOptions = [
+  { value: "emergency", label: "Emergency — need help today" },
+  { value: "this-week", label: "This week" },
+  { value: "this-month", label: "Within the next month" },
+  { value: "planning", label: "Planning ahead" },
+] as const;
+
 export const coverageCities = [
   "Toronto",
   "Mississauga",
@@ -88,11 +95,4 @@ export const faqs = [
     question: "Do you handle emergency service?",
     answer: "Yes. Emergency requests should be routed through the call-to-action in the hero and contact sections.",
   },
-] as const;
-
-export const knowledgeBaseTopics = [
-  "How often should I service my furnace?",
-  "Signs your AC needs replacement",
-  "Tankless water heater vs. tank system",
-  "What affects HVAC repair costs?",
 ] as const;

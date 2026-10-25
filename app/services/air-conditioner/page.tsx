@@ -3,7 +3,7 @@ import { Snowflake, Ruler, Truck, Wrench, ClipboardCheck, Flame, Gauge, ShieldCh
 import { ServicePage } from "@/components/service-page";
 
 export const metadata: Metadata = {
-  title: "Air Conditioner Installation & Service | Air We Go",
+  title: "Air Conditioner Installation & Service",
   description: "Central AC installation, replacement, and service for GTA homes. Proper sizing, same-day emergency calls, and transparent pricing.",
 };
 

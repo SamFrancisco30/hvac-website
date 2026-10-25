@@ -2,7 +2,7 @@
 
 import type { FormEvent } from "react";
 import { useState } from "react";
-import { serviceMenu, coverageCities } from "@/lib/site";
+import { serviceMenu, coverageCities, urgencyOptions } from "@/lib/site";
 
 type FormState = {
   name: string;
@@ -24,13 +24,6 @@ const initialState: FormState = {
   message: "",
 };
 
-const urgencyOptions = [
-  { value: "emergency", label: "Emergency — need help today" },
-  { value: "this-week", label: "This week" },
-  { value: "this-month", label: "Within the next month" },
-  { value: "planning", label: "Planning ahead" },
-];
-
 export function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -45,7 +38,7 @@ export function ContactForm() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, source: window.location.pathname }),
       });
 
       if (!response.ok) throw new Error("Request failed");

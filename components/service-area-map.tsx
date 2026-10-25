@@ -18,77 +18,72 @@ const cityPoints: Array<{ name: (typeof coverageCities)[number]; coordinates: [n
   { name: "Georgetown", coordinates: [-79.918, 43.6501] },
 ];
 
-const tiles = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png";
+// OpenFreeMap: free vector tiles, no API key. Carto's keyless basemaps now return "API KEY REQUIRED" tiles.
+const styleUrl = "https://tiles.openfreemap.org/styles/positron";
+
+// Keep the basemap quiet: our own markers carry the city names, so only water labels stay.
+const keptLabelLayers = new Set(["water_name_point_label", "water_name_line_label"]);
 
 export function ServiceAreaMap({ className = "" }: ServiceAreaMapProps) {
   const mapNode = useRef<HTMLDivElement | null>(null);
-  const mapRef = useRef<import("leaflet").Map | null>(null);
 
   useEffect(() => {
-    if (!mapNode.current || mapRef.current) return;
+    if (!mapNode.current) return;
 
-    let map: import("leaflet").Map | null = null;
-    let resizeObserver: ResizeObserver | null = null;
+    let map: import("maplibre-gl").Map | null = null;
     let cancelled = false;
 
-    void import("leaflet").then((leaflet) => {
-      if (cancelled || !mapNode.current || mapRef.current) return;
+    void import("maplibre-gl").then(({ default: maplibregl }) => {
+      if (cancelled || !mapNode.current) return;
 
-      map = leaflet.map(mapNode.current, {
-        center: [43.52, -79.68],
-        zoom: 9.8,
-        zoomControl: false,
-        attributionControl: false,
-        scrollWheelZoom: false,
-        doubleClickZoom: false,
-        dragging: true,
-        boxZoom: false,
-        keyboard: false,
-        touchZoom: false,
+      const bounds = new maplibregl.LngLatBounds();
+      cityPoints.forEach((city) => bounds.extend(city.coordinates));
+
+      // Room for the overlay badge on top and the marker labels on the sides; narrow (mobile) maps get less side padding.
+      const narrow = mapNode.current.clientWidth < 520;
+
+      map = new maplibregl.Map({
+        container: mapNode.current,
+        style: styleUrl,
+        bounds,
+        fitBoundsOptions: { padding: narrow ? { top: 96, bottom: 32, left: 40, right: 40 } : { top: 120, bottom: 48, left: 96, right: 96 } },
+        interactive: false,
+        attributionControl: { compact: true },
       });
 
-      mapRef.current = map;
+      const loadedMap = map;
 
-      leaflet.tileLayer(tiles, {
-        maxZoom: 18,
-        subdomains: "abcd",
-      }).addTo(map);
+      // The map isn't interactive, so the compact attribution would otherwise stay expanded; start collapsed behind its (i) button.
+      loadedMap.once("load", () => {
+        mapNode.current?.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
+      });
 
-      const leafletMap = map;
+      loadedMap.once("style.load", () => {
+        loadedMap.getStyle().layers.forEach((layer) => {
+          if (layer.type === "symbol" && !keptLabelLayers.has(layer.id)) {
+            loadedMap.setLayoutProperty(layer.id, "visibility", "none");
+          }
+        });
+      });
 
       cityPoints.forEach((city) => {
         const labelSide = city.coordinates[0] < -79.68 ? "right" : "left";
-        const marker = leaflet.marker([city.coordinates[1], city.coordinates[0]], {
-          icon: leaflet.divIcon({
-            className: "",
-            html: `
-              <span class="service-area-marker service-area-marker--${labelSide}">
-                <span class="service-area-marker__dot"></span>
-                <span class="service-area-marker__label">${city.name}</span>
-              </span>
-            `,
-            iconSize: [0, 0],
-            iconAnchor: [0, 0],
-          }),
-        });
+        const element = document.createElement("span");
+        element.className = `service-area-marker service-area-marker--${labelSide}`;
+        element.innerHTML = `
+          <span class="service-area-marker__dot"></span>
+          <span class="service-area-marker__label">${city.name}</span>
+        `;
 
-        marker.addTo(leafletMap);
+        new maplibregl.Marker({ element, anchor: "center" }).setLngLat(city.coordinates).addTo(loadedMap);
       });
-
-      resizeObserver = new ResizeObserver(() => {
-        map?.invalidateSize();
-      });
-
-      resizeObserver.observe(mapNode.current);
     });
 
     return () => {
       cancelled = true;
-      resizeObserver?.disconnect();
       map?.remove();
-      mapRef.current = null;
     };
   }, []);
 
-  return <div ref={mapNode} className={className} aria-label="Interactive service area map of the Greater Toronto Area" role="img" />;
+  return <div ref={mapNode} className={className} aria-label="Map of Air We Go service areas across the Greater Toronto Area" role="img" />;
 }
