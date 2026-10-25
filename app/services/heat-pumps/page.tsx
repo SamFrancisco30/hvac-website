@@ -6,7 +6,7 @@ import { ServicePage } from "@/components/service-page";
 export const metadata: Metadata = {
   title: "Heat Pump Installation",
   description:
-    "Heat pump installation in the GTA with rebate help: Ontario pays up to $7,500 now, and the federal rebate (up to $10,000) opens January 2027. Cold-climate models that heat at -25°C.",
+    "Heat pump installation in the GTA with rebate help: Ontario pays up to $7,500 now, and the new federal rebate (up to $10,000) opens in early 2027. Cold-climate models that heat at -25°C.",
 };
 
 export default function HeatPumpsPage() {
@@ -32,13 +32,13 @@ export default function HeatPumpsPage() {
             </Link>
           </div>
           <div className="rounded-2xl border-2 border-[var(--orange)] bg-white/5 p-8">
-            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--orange)]">Opens January 2027</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--orange)]">Opens early 2027</div>
             <div className="mt-3 text-4xl font-extrabold">
-              Federal adds <span className="text-[var(--orange)]">up to $10,000</span>
+              Federal: <span className="text-[var(--orange)]">up to $10,000</span>
             </div>
             <p className="mt-3 leading-7 text-slate-200">
-              The National Heat Pump Rebate portal opens January 2027 — up to $10,000 for below-median-income
-              households, $2,000 for others, stackable with the Ontario rebate.
+              Ottawa&apos;s new National Heat Pump Rebate: up to $10,000 for low- to median-income households, $2,000
+              for others. The portal opens in early 2027, and eligible installs from November 1, 2026 can apply once it does.
             </p>
             <Link
               href="/rebate-check"
@@ -49,8 +49,9 @@ export default function HeatPumpsPage() {
           </div>
         </div>
         <p className="mx-auto mt-6 max-w-[1280px] rounded-xl border border-amber-400/30 bg-amber-400/10 px-6 py-4 text-sm leading-6 text-amber-100">
-          Furnace dying this winter? Don&apos;t wait for the federal program — Ottawa hasn&apos;t confirmed rebates for
-          installs done before the portal opens. Use the Ontario rebate now; we&apos;ll tell you straight what&apos;s confirmed and what isn&apos;t.
+          Furnace dying this winter? You don&apos;t have to wait for the federal portal — Canada.ca says eligible installs from
+          November 1, 2026 can still apply once it opens. Ontario&apos;s rebate needs pre-approval before the install; we&apos;ll tell you
+          straight what&apos;s confirmed and what isn&apos;t, including whether the two rebates can be combined.
         </p>
       </section>
 
@@ -65,7 +66,7 @@ export default function HeatPumpsPage() {
           "Year-round heating and cooling from one system",
           "Cold-climate models efficient to -25°C",
           "Ontario rebate: up to $7,500 available now (no audit)",
-          "Federal rebate: up to $10,000 more from January 2027",
+          "Federal rebate: up to $10,000, portal opens early 2027",
           "Replaces or supplements existing furnace",
           "2–4× more efficient than electric baseboard heating",
           "Dual-fuel pairing with existing gas furnace available",
@@ -120,11 +121,11 @@ export default function HeatPumpsPage() {
           },
           {
             q: "What rebates can I get right now?",
-            a: "Ontario's Home Renovation Savings program pays up to $7,500 for a cold-climate air-source heat pump in non-gas homes (oil, propane, electric) and up to $2,000 in natural-gas homes — no energy audit required for a heat-pump-only install. The federal National Heat Pump Rebate (up to $10,000) opens in January 2027 and stacks with the Ontario rebate. Note: the old Canada Greener Homes Grant closed in 2024 and is no longer available.",
+            a: "Ontario's Home Renovation Savings program pays up to $7,500 for a cold-climate air-source heat pump in non-gas homes (oil, propane, electric) and up to $2,000 in natural-gas homes — no energy audit required for a heat-pump-only install. The new federal National Heat Pump Rebate (up to $10,000 for low- to median-income households, $2,000 for others) opens in early 2027; Ottawa hasn't yet said how it combines with the Ontario rebate. Note: the old Canada Greener Homes Grant closed in 2024 and is no longer available.",
           },
           {
             q: "Should I wait for the federal rebate in 2027?",
-            a: "Only if your current system can safely make it through the winter. Ottawa hasn't confirmed rebates for installs completed before the January 2027 portal opens, so if your furnace is failing now, don't wait — claim the Ontario rebate today. If your system is healthy, join our early-bird waitlist and we'll book your install the week the portal opens.",
+            a: "Usually not. Canada.ca says households that install an eligible heat pump from November 1, 2026 can apply once the portal opens in early 2027, so you don't need to wait for the launch. Ottawa's full eligibility rules are set for November 1, 2026 — we check your home and the model against them before you commit, and Ontario's rebate needs pre-approval before any work starts.",
           },
           {
             q: "Can a heat pump replace my gas furnace entirely?",

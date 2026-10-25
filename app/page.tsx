@@ -76,7 +76,7 @@ export default function HomePage() {
                 Ontario pays <span className="text-[var(--orange)]">up to $7,500</span> toward your heat pump
               </div>
               <p className="mt-2 text-slate-300">
-                Plus up to $10,000 more from the federal rebate opening January 2027. See what you qualify for in 60 seconds.
+                A new federal rebate of up to $10,000 opens in early 2027. See what you qualify for in 60 seconds.
               </p>
             </div>
             <Link

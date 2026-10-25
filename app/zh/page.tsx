@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "安省热泵补贴查询",
   description:
-    "GTA 华人暖通公司：安省换热泵最高拿 $7,500 补贴，联邦 2027 年再加最高 $10,000。持牌师傅安装，中文沟通，60 秒查你家能拿多少。",
+    "GTA 华人暖通公司：安省换热泵最高拿 $7,500 补贴，联邦新补贴 2027 年初开放，最高 $10,000。持牌师傅安装，中文沟通，60 秒查你家能拿多少。",
 };
 
 const services = [
@@ -25,15 +25,15 @@ const steps = [
 const faqs = [
   {
     q: "补贴是真的吗？",
-    a: "真的。安省 Home Renovation Savings 现在就能申请，空气源热泵非天然气家庭最高 $7,500、天然气家庭 $2,000，不用验房。联邦的全国热泵补贴 2027 年 1 月开放申请，低收入家庭最高 $10,000，可以和省补贴叠加。",
+    a: "真的。安省 Home Renovation Savings 现在就能申请，空气源热泵非天然气家庭最高 $7,500、天然气家庭 $2,000，不用验房。联邦的全国热泵补贴 2027 年初开放申请，中低收入家庭最高 $10,000，其他家庭 $2,000；能不能和省补贴叠加，联邦还没有说明。",
   },
   {
     q: "热泵在多伦多冬天管用吗？",
     a: "管用。冷气候机型 -25°C 照常制热，极寒天自动切换备用热源。顺带夏天还能当空调，一机两用。",
   },
   {
-    q: "2027 年才开放的联邦补贴，现在装是不是亏了？",
-    a: "实话实说：联邦官方还没确认 2027 年之前的安装能不能追溯补领。如果你家炉子这个冬天就撑不住了，别等——先用安省现在的补贴装上；如果还能用，就先进早鸟名单，1 月开放第一时间申请。",
+    q: "联邦补贴 2027 年初才开放，现在装是不是亏了？",
+    a: "不一定。加拿大政府官网说明：2026 年 11 月 1 日起安装合格热泵的家庭，等申请通道开放后可以追溯申请。具体资格规则 11 月 1 日公布，我们会按规则帮你核对房子和机型。安省补贴必须先预审批再安装，动工前要先办好。",
   },
   {
     q: "谁来我家安装？靠谱吗？",
@@ -61,7 +61,7 @@ export default function ZhLandingPage() {
               <span className="mt-3 block text-2xl font-semibold text-slate-200 sm:text-3xl">我们帮你全程申请，一分钱不用多操心</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
-              Air We Go 是 GTA 本地暖通公司。联邦补贴 2027 年 1 月开放，低收入家庭最高再加 $10,000——现在进早鸟名单，开放第一周就帮你申请。
+              Air We Go 是 GTA 本地暖通公司。联邦新补贴 2027 年初开放，中低收入家庭最高 $10,000——现在留个联系方式，规则和通道一出来我们第一时间通知你、帮你申请。
             </p>
             <div className="flex flex-col gap-4 pt-6 sm:flex-row">
               <Link
@@ -95,9 +95,9 @@ export default function ZhLandingPage() {
             </Link>
           </div>
           <div className="rounded-2xl border-2 border-[var(--orange)] bg-white p-8">
-            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--orange)]">2027 年 1 月开放</div>
+            <div className="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--orange)]">2027 年初开放</div>
             <div className="mt-3 text-4xl font-extrabold text-[var(--blue)]">最高 $10,000</div>
-            <p className="mt-3 leading-7 text-slate-600">联邦全国热泵补贴：低于省收入中位数的家庭最高 $10,000，其他人 $2,000，可和省补贴叠加。申请通道 2027 年 1 月开。</p>
+            <p className="mt-3 leading-7 text-slate-600">联邦全国热泵补贴：中低收入家庭最高 $10,000，其他家庭 $2,000。申请通道 2027 年初开放，2026 年 11 月 1 日起的合格安装可以追溯申请。</p>
             <Link href="/rebate-check" className="mt-6 inline-flex items-center gap-2 rounded-lg border-2 border-[var(--blue)] px-6 py-3 font-semibold text-[var(--blue)] transition hover:bg-slate-100">
               <BellRing className="h-4 w-4" /> 进联邦候补名单
             </Link>
